@@ -4,19 +4,19 @@ const data = [
     {
         index:'01',
         title: 'Nowe Wyzwania',
-        quote: '1233',
+        quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, provident, voluptate dolor cum eaque, doloribus non quas eum iure mollitia eligendi est animi quis repellendus iste recusandae accusamus totam ipsum.',
         img: 'img/slide1.png',
     },
     {
         index:'02',
         title: 'Nowe Umięjętości',
-        quote: 'ACBSSWEFW',
+        quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, provident, voluptate dolor cum eaque, doloribus non quas eum iure mollitia eligendi est animi quis repellendus iste recusandae accusamus totam ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, provident, voluptate dolor cum eaque, doloribus non quas eum iure mollitia eligendi est animi quis repellendus iste recusandae accusamus totam ipsum.',
         img: 'img/slide2.png',
     },
     {
         index:'03',
         title: 'Nowe Plany',
-        quote: '1233',
+        quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, provident, voluptate dolor cum eaque, doloribus non quas eum iure mollitia eligendi est animi quis repellendus iste recusandae accusamus totam ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, provident, voluptate dolor cum eaque, doloribus non quas eum iure mollitia eligendi est animi quis repellendus iste recusandae accusamus totam ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, provident, voluptate dolor cum eaque, doloribus non quas eum iure mollitia eligendi est animi quis repellendus iste recusandae accusamus totam ipsum.',
         img: 'img/slide3.png',
     },
 ];

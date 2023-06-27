@@ -1,6 +1,14 @@
 import Slide from "./slide.js";
 
 export default class Slider {
+  #index;
+  #title;
+  #quote;
+  #img;
+  #dots;
+  #slide;
+  #indexInterval;
+  
   constructor(
     slideData,
     sIndex, 
@@ -9,16 +17,15 @@ export default class Slider {
     img, 
     dots)
     {
-    this.index = document.querySelector(sIndex);
-    this.title = document.querySelector(title);
-    this.quote = document.querySelector(quote);
-    this.img = document.querySelector(img);
-    this.dots = [...document.querySelectorAll(dots)];
-    this.slide = [];
-    this.indexInterval = null;
+    this.#index = document.querySelector(sIndex);
+    this.#title = document.querySelector(title);
+    this.#quote = document.querySelector(quote);
+    this.#img = document.querySelector(img);
+    this.#dots = [...document.querySelectorAll(dots)];
+    this.#slide = [];
+    this.#indexInterval = null;
     for (const slide of slideData) {
-      console.log(slide);
-      this.addSlisde(
+      this.#addSlisde(
         new Slide(slide.index, slide.title, slide.quote, slide.img)
       );
     }
@@ -27,44 +34,44 @@ export default class Slider {
     window.addEventListener("keyup", (e) => this.arrowChaneSlide(e));
   }
   start() {
-    this.indexInterval = setInterval(this.changeSlide.bind(this), 3000);
+    this.#indexInterval = setInterval(this.#changeSlide.bind(this), 3000);
   }
-  addSlisde(items) {
-    this.slide.push(items);
+  #addSlisde(items) {
+    this.#slide.push(items);
   }
-  findActiveDots(){
-    return this.dots.findIndex((dot) =>dot.classList.contains("active"));
+  #findActiveDots(){
+    return this.#dots.findIndex((dot) =>dot.classList.contains("active"));
   }
-  updateDots() {
-    const dotIndex = this.findActiveDots();
-    this.dots[dotIndex].classList.remove("active");
-    this.dots[this.active].classList.add("active");
+  #updateDots() {
+    const dotIndex = this.#findActiveDots();
+    this.#dots[dotIndex].classList.remove("active");
+    this.#dots[this.active].classList.add("active");
   }
-  changeSlide(action = 'plus') {
+  #changeSlide(action = 'plus') {
     action == 'plus' ? this.active++ : this.active--;
     
-    if (this.active === this.slide.length){
+    if (this.active === this.#slide.length){
         this.active = 0;
     }else if (this.active < 0) {
-        this.active = this.slide.length - 1;
+        this.active = this.#slide.length - 1;
     }
-    this.index.textContent = this.slide[this.active].index;
-    this.title.textContent = this.slide[this.active].title;
-    this.quote.textContent = this.slide[this.active].quote;
-    this.img.src = this.slide[this.active].img;
-    this.updateDots();
+    this.#index.textContent = this.#slide[this.active].index;
+    this.#title.textContent = this.#slide[this.active].title;
+    this.#quote.textContent = this.#slide[this.active].quote;
+    this.#img.src = this.#slide[this.active].img;
+    this.#updateDots();
   }
 
   arrowChaneSlide(e) {
-    clearInterval(this.indexInterval);
+    clearInterval(this.#indexInterval);
 
     switch (e.keyCode) {
       case 37:
         console.log('działa');
-        this.changeSlide('minus');
+        this.#changeSlide('minus');
         break;
       case 39:
-        this.changeSlide();
+        this.#changeSlide();
         break;
       default:
         break;

@@ -22,25 +22,41 @@ html{
     right: 20%;
     height: 160px;
     display: flex;
+    flex-wrap: wrap;
 
+}
+@media screen and (min-width:1600px) {
+    .banner__describe{
+         flex-wrap: nowrap;
+    } 
 }
 .banner__describe-id{
     font-size: 5.5rem;
     line-height: 160px;
     min-width: 160px;
     text-align: center;
-    color: #ddd;
+    color: #c7c2c2;
     border: 1px solid #ddd;
 }
 .banner__describe-title{
     min-width: 300px;
     text-align: center;
     line-height: 160px;
-    font-size: 3.1rem;
+    font-size: 3.3rem;
     padding: 0 10px ;
     color: #000;
     letter-spacing: .5px;
     background-color: #F2CB05;
+}
+.banner__describe-decription{
+    color: #ddd;
+    font-size: 2rem;
+    padding: 15px 10px 3px 10px ;
+}
+@media screen and (min-width:1600px) {
+    .banner__describe-decription{
+        padding: 3px 15px;
+    } 
 }
 .banner__img{
     position: absolute;
@@ -51,4 +67,43 @@ html{
     transform: translate(-50%,-50%);
     filter: brightness(0.7) grayscale(0.6);
     z-index: -1;
+}
+
+.banner__dots-container{
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.banner__dots-container span{
+    font-size: 2rem;
+    padding: 9px;
+    color: #fff;
+    transition: .2s linear;
+}
+.banner__dots-container span.active{
+    color: #F2CB05;
+}
+
+.banner__learn{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: #000;
+    font-size: 2.2rem;
+    border: 1px solid #ddd;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+.banner__learn:hover{
+    background-color: transparent;
+    color: #F2CB05;
+    border: 1px solid #F2CB05;
 }
