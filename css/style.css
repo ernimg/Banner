@@ -8,27 +8,47 @@ html{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
 }
-
 .banner{
+    width: 100%;
+    min-width: 640px;
+    height:100vh;
     position: relative;
+    overflow: hidden;
 }
-
-.banner__dots-container{
-    height: 30px;
-    width: 200px;
-    top: 10%;
-    left: 10%;
+.banner__describe{
     position: absolute;
-}
+    top: 5%;
+    left: 5%;
+    right: 20%;
+    height: 160px;
+    display: flex;
 
-.banner__dots-container span{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin: 5px;
-    background-color: #000;
 }
-
-.banner__dots-container span.active{
-    background-color:red;
+.banner__describe-id{
+    font-size: 5.5rem;
+    line-height: 160px;
+    min-width: 160px;
+    text-align: center;
+    color: #ddd;
+    border: 1px solid #ddd;
+}
+.banner__describe-title{
+    min-width: 300px;
+    text-align: center;
+    line-height: 160px;
+    font-size: 3.1rem;
+    padding: 0 10px ;
+    color: #000;
+    letter-spacing: .5px;
+    background-color: #F2CB05;
+}
+.banner__img{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    filter: brightness(0.7) grayscale(0.6);
+    z-index: -1;
 }

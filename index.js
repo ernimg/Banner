@@ -21,5 +21,5 @@ const data = [
     },
 ];
 
-const slider = new Slider(data,'.banner__describe--id','.banner__describe--title','.banner__describe--decription','.banner__img','.banner__dots-container span');
+const slider = new Slider(data,'.banner__describe-id','.banner__describe-title','.banner__describe-decription','.banner__img','.banner__dots-container span');
 slider.start();

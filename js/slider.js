@@ -40,7 +40,7 @@ export default class Slider {
     this.dots[dotIndex].classList.remove("active");
     this.dots[this.active].classList.add("active");
   }
-  changeSlide(action) {
+  changeSlide(action = 'plus') {
     action == 'plus' ? this.active++ : this.active--;
     
     if (this.active === this.slide.length){
@@ -64,7 +64,7 @@ export default class Slider {
         this.changeSlide('minus');
         break;
       case 39:
-        this.changeSlide('plus');
+        this.changeSlide();
         break;
       default:
         break;
