@@ -10,7 +10,6 @@ html{
 }
 .banner{
     width: 100%;
-    min-width: 640px;
     height:100vh;
     position: relative;
     overflow: hidden;
@@ -25,15 +24,11 @@ html{
     flex-wrap: wrap;
 
 }
-@media screen and (min-width:1600px) {
-    .banner__describe{
-         flex-wrap: nowrap;
-    } 
-}
+
 .banner__describe-id{
-    font-size: 5.5rem;
-    line-height: 160px;
-    min-width: 160px;
+    font-size: 3rem;
+    line-height: 130px;
+    min-width: 130px;
     text-align: center;
     color: #c7c2c2;
     border: 1px solid #ddd;
@@ -41,8 +36,8 @@ html{
 .banner__describe-title{
     min-width: 300px;
     text-align: center;
-    line-height: 160px;
-    font-size: 3.3rem;
+    line-height: 130px;
+    font-size: 2.5rem;
     padding: 0 10px ;
     color: #000;
     letter-spacing: .5px;
@@ -50,14 +45,11 @@ html{
 }
 .banner__describe-decription{
     color: #ddd;
-    font-size: 2rem;
-    padding: 15px 10px 3px 10px ;
+    font-size: 1.6rem;
+    letter-spacing: .3px;
+    padding: 25px 10px 3px 10px ;
 }
-@media screen and (min-width:1600px) {
-    .banner__describe-decription{
-        padding: 3px 15px;
-    } 
-}
+
 .banner__img{
     position: absolute;
     height: 100vh;
@@ -65,7 +57,7 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    filter: brightness(0.7) grayscale(0.6);
+    filter: brightness(0.5) grayscale(0.5);
     z-index: -1;
 }
 
@@ -83,6 +75,9 @@ html{
     padding: 9px;
     color: #fff;
     transition: .2s linear;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, .5);
 }
 .banner__dots-container span.active{
     color: #F2CB05;
@@ -95,7 +90,7 @@ html{
     transform: translateX(-50%);
     background-color: #fff;
     color: #000;
-    font-size: 2.2rem;
+    font-size: 2rem;
     border: 1px solid #ddd;
     text-transform: uppercase;
     padding: 10px 20px;
@@ -106,4 +101,40 @@ html{
     background-color: transparent;
     color: #F2CB05;
     border: 1px solid #F2CB05;
+}
+
+@media screen and (min-width:800px) {
+    .banner__describe-id{
+        font-size: 4.5rem;
+        line-height: 160px;
+        min-width: 160px;
+    }
+    .banner__describe-title{
+        line-height: 160px;
+        font-size: 3.5rem;
+    }
+    .banner__describe-decription{
+        font-size: 2rem;
+    }
+    .banner__dots-container span{
+        font-size: 2.3rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .banner__describe-id{
+        font-size: 6.5rem;
+        line-height: 200px;
+        min-width: 200px;
+    }
+    .banner__describe-title{
+        line-height: 200px;
+        font-size: 5.5rem;
+    }
+    .banner__describe-decription{
+        font-size: 2.8rem;
+    }
+    .banner__dots-container span{
+        font-size: 2.6rem;
+    }
 }
